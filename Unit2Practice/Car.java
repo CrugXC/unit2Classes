@@ -16,29 +16,47 @@ public class Car
     private double currentFuel;
 
     /**
-     * Default constructor for objects of class Car
+     * Constructor for objects of class Car that specifies the fuel efficiency of the car.
      */
-    public Car()
+    public Car(double fuelEfficiency)
     {
-        // initialise instance variables
-        x = 0;
+        currentFuel = 0.0;
+        fuelEfficiency = fuelEfficiency;
+        
+        
+       
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * Simulates driving the car the specified distance in miles and reduces the amount of fuel in the gas tank based on the fuel efficiency.
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * @pre        The specified distance cannot consume more than the fuel available in the tank.
+     * @param    distance   the specified distance to drive in miles
      */
-    public int sampleMethod(int y)
+    public void drive( double distance)
     {
-        // put your code here
-        return x+y;
+        currentFuel -= (distance / fuelEfficiency);
+    }
+    
+    /**
+     * Returns the number of gallons of gas in the car's tank.
+     * @return  Returns the number of gallons of gas in the car's tank.
+     */
+    public double getGasInTank()
+    {
+        return currentFuel;
+    }
+
+    /**
+     * Increments the fuel stored in the car's tank by the specified amount in gallons.
+     *
+     * @pre     Passed value must be positive
+     * @param   addedGas    Amount of gallons of gas to increment the fuel in the car's tank.
+     * @return  description of the return value
+     */
+    public void addGas(double addedGas)
+    {
+        currentFuel += addedGas;
     }
 
 }
