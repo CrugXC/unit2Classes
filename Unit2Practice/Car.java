@@ -18,10 +18,10 @@ public class Car
     /**
      * Constructor for objects of class Car that specifies the fuel efficiency of the car.
      */
-    public Car(double fuelEfficiency)
+    public Car(double fuelEfficiencyInsert)
     {
         currentFuel = 0.0;
-        fuelEfficiency = fuelEfficiency;
+        fuelEfficiency = fuelEfficiencyInsert;
         
         
        
