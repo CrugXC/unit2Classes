@@ -25,10 +25,10 @@ public class Arrow
         Point2D.Double p4 = new Point2D.Double(xCord - 20, yCord);
         Point2D.Double p5 = new Point2D.Double(xCord - 70, yCord);
         
-        Line2D,Double l1 = new Line2D.Double(p1, p2);
-        Line2D,Double l2 = new Line2D.Double(p1, p3);
-        Line2D,Double l3 = new Line2D.Double(p2, p3);
-        Line2D,Double l4 = new Line2D.Double(p4, p5);
+        Line2D.Double l1 = new Line2D.Double(p1, p2);
+        Line2D.Double l2 = new Line2D.Double(p1, p3);
+        Line2D.Double l3 = new Line2D.Double(p2, p3);
+        Line2D.Double l4 = new Line2D.Double(p4, p5);
         
         g2.draw(l1);
         g2.draw(l2);
