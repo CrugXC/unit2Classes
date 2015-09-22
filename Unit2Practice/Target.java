@@ -30,7 +30,7 @@ public class Target
         xCord = x;
         yCord = y;
         Color[][] colorArray = {
-            {Color.RED, Color.BLUE, Color.MAGENTA, Color.ORANGE, Color.YELLOW}
+            {Color.RED, Color.BLUE, Color.MAGENTA, Color.ORANGE, Color.YELLOW} /** CYAN, GREY, GREEN, BLACK, PINK*/
         };
         
         int color1 = r1.nextInt(5);
