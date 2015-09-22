@@ -31,8 +31,11 @@ public class Arrow
         Line2D,Double l4 = new Line2D.Double(p4, p5);
         
         g2.draw(l1);
-        g2.draw(l1);
-        g2.draw(l1);
+        g2.draw(l2);
+        g2.draw(l3);
+        g2.draw(l4);
+    }
+}
         
         
         
