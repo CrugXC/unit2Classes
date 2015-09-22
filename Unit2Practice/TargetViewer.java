@@ -9,10 +9,11 @@ import javax.swing.JFrame;
 public class TargetViewer
 {
    public static void main(String[] args)
+    throws InterruptedException
    {
        JFrame frame = new JFrame();
        
-       frame.setSize(200,200);
+       frame.setSize(400,400);
        frame.setTitle("Target");
        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        
@@ -20,5 +21,12 @@ public class TargetViewer
        frame.add(component);
        
        frame.setVisible(true);
+       int t = 0;
+       while( t != 10)
+       {
+           Thread.sleep(1000);
+           frame.repaint();
+           t += 1;
+        }
     }
 }

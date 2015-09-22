@@ -1,5 +1,7 @@
 import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
+import java.awt.geom.Line2D;
+import java.awt.geom.Point2D;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.Random;
@@ -17,7 +19,10 @@ public class Target
     
     /** yCord   Determines the y-coordinate of the target on the screen */
     private int yCord;
-    
+    private Color[] colorArray = {Color.RED, Color.BLUE, Color.MAGENTA, Color.ORANGE, Color.YELLOW, Color.CYAN, Color.GRAY, Color.GREEN, Color.PINK};
+        ;
+    private int color1;
+    private int color2;
 
 
 
@@ -29,18 +34,25 @@ public class Target
         Random r1 = new Random();
         xCord = x;
         yCord = y;
-        Color[][] colorArray = {
-            {Color.RED, Color.BLUE, Color.MAGENTA, Color.ORANGE, Color.YELLOW} /** CYAN, GREY, GREEN, BLACK, PINK*/
-        };
         
-        int color1 = r1.nextInt(5);
-        int color2 = r1.nextInt(5);
+        
+        color1 = r1.nextInt(5);
+        color2 = r1.nextInt(5);
         while(color1 == color2)
         {
             color2 = r1.nextInt(5);
         }
     }
 
+    
+    public Point2D getCords()
+    {
+        Point2D p1 = new Point2D.Double(xCord, yCord);
+        return p1;
+    }
+    
+    
+    
     /**
      * Creates the target on the screen
      *
@@ -49,23 +61,23 @@ public class Target
     public void draw(Graphics2D g2)
     {
         
-        Ellipse2D.Double circle5 = new Ellipse2D.Double(25,25,100,100);
+        Ellipse2D.Double circle5 = new Ellipse2D.Double(xCord + 25, yCord + 25,100,100);
         g2.setPaint(colorArray[color1]);
         g2.fill(circle5);
         
-        Ellipse2D.Double circle4 = new Ellipse2D.Double(35,35,80,80);
+        Ellipse2D.Double circle4 = new Ellipse2D.Double(xCord + 35,yCord + 35,80,80);
         g2.setPaint(colorArray[color2]);
         g2.fill(circle4);
         
-        Ellipse2D.Double circle3 = new Ellipse2D.Double(45,45,60,60);
+        Ellipse2D.Double circle3 = new Ellipse2D.Double(xCord + 45, yCord + 45,60,60);
         g2.setPaint(colorArray[color1]);
         g2.fill(circle3);
         
-        Ellipse2D.Double circle2 = new Ellipse2D.Double(55,55,40,40);
+        Ellipse2D.Double circle2 = new Ellipse2D.Double(xCord + 55, yCord +55,40,40);
         g2.setPaint(colorArray[color2]);
         g2.fill(circle2);
         
-        Ellipse2D.Double circle1 = new Ellipse2D.Double(65,65,20,20);
+        Ellipse2D.Double circle1 = new Ellipse2D.Double(xCord + 65, yCord + 65,20,20);
         g2.setPaint(colorArray[color1]);
         g2.fill(circle1);
         
