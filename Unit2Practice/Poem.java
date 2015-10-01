@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Poem
 {
-    private String[] articles = {The”, “A”};
+    private String[] articles = {The, “A”};
 
     private String[] adjectives = {“jealous”, “irritated”, “skeptical”, “bewildered”, “discouraged”, “insignificant”, “inadequate”, “embarrassed”, “overwhelmed”, “daring”, “fascinating”, “amused”, “playful”, “optimistic”, “surprised”, “successful”, “worthwhile”, “valuable”, “discerning”, “confident”, “thankful”, “responsive”, “pensive”, “relaxed”, “sleepy”, “apathetic”, “isolated”, inferior”, “stupid”, “remorseful”, “distant”, “sarcastic”, “frustrated”, “jealous”};
 

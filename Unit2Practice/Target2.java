@@ -14,12 +14,12 @@ public class Target2
     private int r;
     
     
-    public Target2(int x, int y, int numberOfRings, radius)
+    public Target2(int x, int y, int numberOfRings)
     {
         xCord = x;
         yCord = y;
         rings = numberOfRings;
-        r = radius;
+   
     }
     
     public void draw(Graphics2D g2)
