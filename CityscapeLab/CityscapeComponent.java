@@ -29,11 +29,13 @@ public class CityscapeComponent extends JComponent
     {
         Graphics2D g2 = (Graphics2D) g;
         
-        Background base = new Background();
-        
+        Background base = new Background(50);
+        Bridge suspBridge = new Bridge(100);
         
         base.draw(g2);
+        suspBridge.draw(g2);
     }
+
     
     /**
      * Animate the cityscape by updating the objects such that they appear to be animated when they are next drawn.
