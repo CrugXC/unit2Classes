@@ -4,6 +4,7 @@ import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
 
+
 /**
  * Creates 2 green circles below the page, so the top of them peaks into the screen to form 2 island like shapes
  * and a blue rectangle at the base to look like water, and a dark blue background to be the sky
