@@ -31,9 +31,11 @@ public class CityscapeComponent extends JComponent
         
         Background base = new Background(50);
         Bridge suspBridge = new Bridge(100);
+        Buildings skyscrapers = new Buildings(200);
         
         base.draw(g2);
         suspBridge.draw(g2);
+        skyscrapers.draw(g2);
     }
 
     
