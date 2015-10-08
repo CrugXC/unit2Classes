@@ -37,8 +37,8 @@ public class Grid
         {
             Rectangle2D.Double vertLine = new Rectangle2D.Double(intervalCord, 0, 2, YDIM);
             Rectangle2D.Double horzLine = new Rectangle2D.Double(0, intervalCord, XDIM, 2);
-            g2.drawString("cord" + intervalCord, 930.0, intervalCord + 30);
-            g2.drawString("" + intervalCord,  intervalCord + 30, 20.0);
+ 
+       
             g2.setPaint(new Color(0, 0, 0));
             g2.fill(vertLine);
             g2.fill(horzLine);
