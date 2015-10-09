@@ -31,7 +31,7 @@ public class CityscapeViewer
         
         
         // a frame contains a single component; create the Cityscape component and add it to the frame
-        CityscapeComponent component = new CityscapeComponent( /* pass the user-specified value */ );
+        CityscapeComponent component = new CityscapeComponent(100);
         frame.add(component);
         
         // make the frame visible which will result in the paintComponent method being invoked on the
