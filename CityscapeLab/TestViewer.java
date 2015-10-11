@@ -9,7 +9,7 @@ public class TestViewer
         // create and configure the frame (window) for the program
         JFrame frame = new JFrame();
         
-        frame.setSize(800 /* x */, 600 /* y */);
+        frame.setSize(1920 /* x */, 940 /* y */);
         frame.setTitle("Test");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
