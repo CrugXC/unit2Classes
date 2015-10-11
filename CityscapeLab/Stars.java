@@ -26,6 +26,7 @@ public class Stars
     private double yDim;
     private ArrayList starInfo;
     
+    
 
     /**
      * Input amountStars and assigns it to numberOfStars
@@ -37,6 +38,8 @@ public class Stars
         xDim = xDimension;
         yDim = yDimension;
         starInfo = starData;
+        
+
         
     }
     

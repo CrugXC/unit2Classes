@@ -15,6 +15,11 @@ public class CityscapeComponent extends JComponent
     // define the objects in your Cityscape as instance variables
     // ...
     private int numberOfStars;
+    private ArrayList starInfo;
+    private Background base;
+    private Bridge suspBridge;
+    private Buildings skyscrapers;
+    private Grid mainGrid;
     
     
     // define the CityscapeComponent contructor and intiailize all instance variables
@@ -22,6 +27,17 @@ public class CityscapeComponent extends JComponent
     public CityscapeComponent(int amountStars)
     {
         numberOfStars = amountStars;
+        
+        
+        ArrayList starInfo = new ArrayList(numberOfStars);
+        StarGenerator starInformation = new StarGenerator(numberOfStars);
+        starInfo = starInformation.starMaker();
+        
+        
+        Background base = new Background(50);
+        Bridge suspBridge = new Bridge(100);
+        Buildings skyscrapers = new Buildings(200);
+        Grid mainGrid = new Grid();
     }
     
     /**
@@ -34,16 +50,9 @@ public class CityscapeComponent extends JComponent
         Graphics2D g2 = (Graphics2D) g;
         
         
-        ArrayList starInfo = new ArrayList(numberOfStars);
-        StarGenerator starInformation = new StarGenerator(numberOfStars);
-        starInfo = starInformation.starMaker();
-        
-        
-        Background base = new Background(50);
-        Stars starDots = new Stars(100, 5, 5, starInfo);
-        Bridge suspBridge = new Bridge(100);
-        Buildings skyscrapers = new Buildings(200);
-        Grid mainGrid = new Grid();
+       
+        Stars starDots = new Stars(numberOfStars, 5, 5, starInfo);
+
         
         
         

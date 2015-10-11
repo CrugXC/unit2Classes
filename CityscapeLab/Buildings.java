@@ -18,8 +18,14 @@ public class Buildings
     private double x1;
     private double x2;
     private double baseCord;
-    private double frameSize;
     private Color[] colorArray = {Color.GRAY, Color.LIGHT_GRAY, Color.BLACK, Color.BLUE};
+    private int buildingColor;
+    private int buildingType;
+    private double yHeight;
+    private double buildingCord;
+    private double xWidth;
+    private double firstHeight;
+    private double secondHeight;
     /**
      * Default constructor for objects of class Buildings
      */
@@ -29,6 +35,25 @@ public class Buildings
         x1 = 40;
         x2 = 1070;
         baseCord = 800; 
+        
+        /* Creates a random object, then generates a number based of that in order to decide the type of building */
+        Random r1 = new Random();
+        
+        /* Color Randomizer */
+        buildingColor = r1.nextInt(4);
+        
+        
+        /*Chooses building Type*/
+        buildingType = r1.nextInt(2);
+        
+        /*Determines the height and width of this building instance */
+        yHeight = avHeight + (r1.nextInt((int)(avHeight/3)) - (int)(avHeight/6.0));
+        buildingCord = baseCord - yHeight;
+        xWidth = (avHeight/4) + (r1.nextInt((int) (avHeight/10)) - (int) (avHeight/20));
+        
+        
+        firstHeight = avHeight/2;
+        secondHeight = avHeight/1.5;
     }
 
     /**
@@ -40,21 +65,7 @@ public class Buildings
      */
     public void draw(Graphics2D g2)
     {
-        /* Creates a random object, then generates a number based of that in order to decide the type of building */
-        Random r1 = new Random();
-        
-        /* Color Randomizer */
-        int buildingColor = r1.nextInt(4);
-        
-        
-        /*Chooses building Type*/
-        int buildingType = r1.nextInt(2);
-        
-        /*Determines the height and width of this building instance */
-        double yHeight = avHeight + (r1.nextInt((int)(avHeight/3)) - (int)(avHeight/6.0));
-        double buildingCord = baseCord - yHeight;
-        double xWidth = (avHeight/4) + (r1.nextInt((int) (avHeight/10)) - (int) (avHeight/20));
-        
+
         
         /* Sets paint color */
         g2.setPaint(colorArray[buildingColor]);
@@ -70,8 +81,7 @@ public class Buildings
         if(buildingType == 1)
         {
             /*Creates a stacked building using rounded rectangle */
-            double firstHeight = avHeight/2;
-            double secondHeight = avHeight/1.5;
+
             Rectangle2D.Double startRectangle = new Rectangle2D.Double(x1, buildingCord + firstHeight, xWidth, firstHeight);
             RoundRectangle2D.Double firstTop = new RoundRectangle2D.Double (x1, buildingCord + firstHeight - 20, xWidth, firstHeight, xWidth/2, xWidth/2);
             
