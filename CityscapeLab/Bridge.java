@@ -1,3 +1,7 @@
+/* NOTE: This class was scrapped due to the approaching due date and the difficulty in the mathemtics of calculating parameters for the QuadCurve2D class*/
+
+
+
 import java.awt.Color;
 import java.util.Random;
 import java.awt.Graphics2D;
@@ -37,8 +41,7 @@ public class Bridge
     public void draw(Graphics2D g2)
     {
         /* Creates the framework for the bridge, 1 horizontal rectangle spanning between the islands, and 2 vertical rectangles as a tower */
-        Rectangle2D.Double bridgeRoad = new Rectangle2D.Double(805, 1000, 190, 25);
-        
+        Rectangle2D.Double bridgeRoad = new Rectangle2D.Double(720, 815, 300, 20);
         
         g2.setColor(Color.BLACK);
         g2.fill(bridgeRoad);

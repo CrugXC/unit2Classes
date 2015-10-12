@@ -100,12 +100,16 @@ public class Stars
                 g2.fill(star);
             }
             
-            else
+            
+            if(stateHolder < 8)
             {
-                Ellipse2D.Double star = new Ellipse2D.Double(1,1,1,1);
+                starInfo.set(i + 2, stateHolder + 1);
             }
             
-            
+            else
+            {
+                starInfo.set(i + 2, 0);
+            }
             
             i += 3;
         }

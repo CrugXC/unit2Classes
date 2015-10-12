@@ -33,7 +33,7 @@ public class StarGenerator
         while(i < numberOfStars)
         {
             starData.add(r1.nextInt(1920) + 1);
-            starData.add(r1.nextInt(750) + 1);
+            starData.add(r1.nextInt(800) + 1);
             starData.add(r1.nextInt(9));
             
             
