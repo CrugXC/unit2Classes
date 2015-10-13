@@ -45,7 +45,7 @@ public class BuildingGenerator
             while(xCord < 1800)
             {
                 /* Color Randomizer */
-                buildingData.add(r1.nextInt(13));
+                buildingData.add(r1.nextInt(12));
                 
                
                 

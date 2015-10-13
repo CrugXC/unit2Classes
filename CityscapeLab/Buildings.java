@@ -76,11 +76,10 @@ public class Buildings
                     g2.fill(secondTop);
                     
                 }
-                
-                
-                i += 6;
+
             }
-            
+                            
+            i += 6;
         }
     }
 
