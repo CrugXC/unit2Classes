@@ -20,6 +20,7 @@ public class CityscapeComponent extends JComponent
      */
     private int numberOfStars;
     private ArrayList starInfo;
+    private ArrayList buildingInfo;
     private Background base;
     //CLASS REMOVED - private Bridge suspBridge;
     private Buildings skyscrapers;
@@ -37,6 +38,10 @@ public class CityscapeComponent extends JComponent
         StarGenerator starInformation = new StarGenerator(numberOfStars);
         starInfo = starInformation.starMaker();
         
+        buildingInfo = new ArrayList();
+        BuildingGenerator buildingInformation = new BuildingGenerator(avHeight);
+        buildingInfo = buildingInformation.BuildingMaker();
+        
         //Creates the Background object based on the parameter of waterHeight
         base = new Background(waterHeight);
         
@@ -44,7 +49,7 @@ public class CityscapeComponent extends JComponent
         //CLASS REMOVED - suspBridge = new Bridge(towerHeight);
         
         //Creates the Buildings object based on the parameter of avHeight
-        skyscrapers = new Buildings(avHeight);
+        skyscrapers = new Buildings(buildingInfo);
         
         //Not used in this version of the program, also it currently does not work, reason unknown
         //mainGrid = new Grid();
